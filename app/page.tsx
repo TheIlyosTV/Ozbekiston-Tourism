@@ -1,7 +1,7 @@
+"use client"
 import Link from "next/link";
 import Image from "next/image";
 import RegionCarousel from "../components/RegionCarousel";
-import InteractiveMap from "../components/InteractiveMap";
 import VirtualTour from "../components/VirtualTour";
 import FeatureCard from "../components/FeatureCard";
 
@@ -47,14 +47,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Interaktiv xarita
-          </h2>
-          <InteractiveMap />
-        </div>
-      </section>
+   
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
