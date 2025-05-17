@@ -48,8 +48,8 @@ const PlanTripPage = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-8 text-center">
+    <div className="container mx-auto px-4 py-8 mt-16">
+      <h1 className="text-4xl font-bold mb-8 text-center text-black">
         Sayohatni rejalashtirish
       </h1>
       <form
@@ -145,7 +145,7 @@ const PlanTripPage = () => {
           <label className="block text-gray-700 text-sm font-bold mb-2">
             Tashrif buyurmoqchi bo&apos;lgan viloyatlar
           </label>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-2 text-black">
             {[
               "Toshkent",
               "Samarqand",
@@ -192,7 +192,7 @@ const PlanTripPage = () => {
         </div>
         <div className="flex items-center justify-center">
           <button
-            className="bg-accent hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-black rounded-full hover:bg-opacity-90 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline "
             type="submit"
           >
             Sayohat uchun ariza yuborish

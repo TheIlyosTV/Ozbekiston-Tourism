@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -42,13 +42,15 @@ const tourPackages = [
 
 export default function TourPackagesPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-8 text-center">Sayohat paketlari</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="container mx-auto px-4 py-8 mt-16">
+      <h1 className="text-4xl font-bold mb-8 text-center text-black">
+        Sayohat paketlari
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
         {tourPackages.map((pack) => (
           <div
             key={pack.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden"
+            className="bg-white rounded-lg shadow-md overflow-hidden text-black"
           >
             <div className="relative w-full" style={{ aspectRatio: "16 / 9" }}>
               <Image

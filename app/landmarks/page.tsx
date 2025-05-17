@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 
 const landmarks = [
@@ -133,13 +133,15 @@ const landmarks = [
 
 export default function Landmarks() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold mb-8 mx-4">Ziyoratgohlar</h1>
+    <div className="bg-white mt-16">
+      <h1 className="text-3xl font-bold mb-8 mx-4 text-center text-black">
+        Ziyoratgohlar
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-4">
         {landmarks.map((landmark) => (
           <div
             key={landmark.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden mb-8 "
+            className="bg-white rounded-lg shadow-md overflow-hidden mb-8 text-black"
           >
             <div className="relative w-full" style={{ aspectRatio: "16 / 9" }}>
               <Image
@@ -151,7 +153,7 @@ export default function Landmarks() {
             </div>
 
             <div className="p-4">
-              <h2 className="text-xl font-semibold mb-2">{landmark.name}</h2>
+              <h2 className="text-xl font-semibold mb-2 text-black">{landmark.name}</h2>
               <p className="text-sm text-gray-600 mb-2">{landmark.location}</p>
               <p className="text-sm text-gray-600 mb-2">
                 Qurilgan yili: {landmark.yearBuilt}

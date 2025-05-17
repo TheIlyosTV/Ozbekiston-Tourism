@@ -1,19 +1,22 @@
-
 import Image from "next/image";
 import Link from "next/link";
-import { regions } from '../../data/regions';
-import { Metadata } from 'next';
+import { regions } from "../../data/regions";
+import { Metadata } from "next";
 
 type RegionPageProps = {
   params: Promise<{ id: string }>;
 };
 
-export async function generateMetadata({ params }: RegionPageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: RegionPageProps): Promise<Metadata> {
   const { id } = await params;
   const region = regions.find((r) => r.id === Number(id));
   return {
-    title: region ? `${region.name} | Your App Name` : 'Region Not Found',
-    description: region ? region.description : 'Region information not available',
+    title: region ? `${region.name} | Your App Name` : "Region Not Found",
+    description: region
+      ? region.description
+      : "Region information not available",
   };
 }
 
@@ -32,8 +35,10 @@ export default async function RegionPage({ params }: RegionPageProps) {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-8 text-center">{region.name}</h1>
+    <div className="container mx-auto px-4 py-8 mt-16">
+      <h1 className="text-4xl font-bold mb-8 text-center text-black">
+        {region.name}
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
@@ -46,36 +51,42 @@ export default async function RegionPage({ params }: RegionPageProps) {
           </div>
         </div>
         <div>
-          <p className="text-lg mb-4">{region.description}</p>
-          <h2 className="text-2xl font-semibold mb-4">
+          <p className="text-lg mb-4 text-black font-semibold">
+            {region.description}
+          </p>
+          <h2 className="text-2xl font-semibold mb-4 text-black">
             Diqqatga sazovor joylar
           </h2>
-          <ul className="list-disc list-inside mb-4">
+          <ul className="list-disc list-inside mb-4 text-black">
             {region.attractions.map((attraction, index) => (
               <li key={index}>{attraction}</li>
             ))}
           </ul>
-          <h2 className="text-2xl font-semibold mb-4">Mehmonxonalar</h2>
-          <ul className="list-disc list-inside mb-4">
+          <h2 className="text-2xl font-semibold mb-4 text-black">
+            Mehmonxonalar
+          </h2>
+          <ul className="list-disc list-inside mb-4 text-black">
             {region.hotels.map((hotel, index) => (
               <li key={index}>{hotel}</li>
             ))}
           </ul>
-          <h2 className="text-2xl font-semibold mb-4">Restoranlar</h2>
-          <ul className="list-disc list-inside mb-4">
+          <h2 className="text-2xl font-semibold mb-4 text-black">
+            Restoranlar
+          </h2>
+          <ul className="list-disc list-inside mb-4 text-black">
             {region.restaurants.map((restaurant, index) => (
               <li key={index}>{restaurant}</li>
             ))}
           </ul>
           <Link
             href={`/plan-trip?region=${region.name}`}
-            className="bg-secondary text-white px-6 py-2 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300 mr-4"
+            className="bg-black text-white px-6 py-2 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300 mr-4"
           >
             Sayohat buyurtma qilish
           </Link>
           <Link
             href="/regions"
-            className="bg-accent text-white px-6 py-2 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300"
+            className="bg-black text-white px-6 py-2 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300"
           >
             Barcha viloyatlar
           </Link>
@@ -84,4 +95,3 @@ export default async function RegionPage({ params }: RegionPageProps) {
     </div>
   );
 }
-

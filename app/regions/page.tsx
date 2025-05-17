@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -79,8 +79,8 @@ const regions = [
 
 const RegionsPage = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-8 text-center">
+    <div className="container mx-auto px-4 py-8 mt-16">
+      <h1 className="text-4xl font-bold mb-8 text-center text-black">
         O&apos;zbekiston viloyatlari
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -96,7 +96,9 @@ const RegionsPage = () => {
                 />
               </div>
               <div className="p-4">
-                <h2 className="text-xl font-semibold mb-2">{region.name}</h2>
+                <h2 className="text-xl font-semibold mb-2 text-black">
+                  {region.name}
+                </h2>
                 <p className="text-gray-600">{region.description}</p>
               </div>
             </div>

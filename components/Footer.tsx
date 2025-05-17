@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white py-8">
+    <footer className="bg-black text-white py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
@@ -11,8 +11,9 @@ const Footer = () => {
               O&apos;zbekiston Sayyohlik Salohiyati
             </h3>
             <p className="text-sm">
-              O&apos;zbekistonning go&apos;zal shaharlari, ziyoratgohlari va milliy
-              taomlari haqida ma&apos;lumot
+              O&apos;zbekistonning go&apos;zal shaharlari, ziyoratgohlari va{" "}
+              <br />
+              milliy taomlari haqida ma&apos;lumot
             </p>
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 
 const cultureSections = [
@@ -46,12 +46,14 @@ const cultureSections = [
 
 export default function CulturePage() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-8 text-center">O&apos;zbek madaniyati</h1>
+    <div className="container mx-auto px-4 py-8 mt-16">
+      <h1 className="text-4xl font-bold mb-8 text-center text-black">
+        O&apos;zbek madaniyati
+      </h1>
       {cultureSections.map((section, index) => (
         <div
           key={index}
-          className={`flex flex-col md:flex-row items-center mb-12 ${
+          className={`flex flex-col md:flex-row items-center mb-12 text-black ${
             index % 2 === 1 ? "md:flex-row-reverse" : ""
           }`}
         >
@@ -71,10 +73,10 @@ export default function CulturePage() {
         </div>
       ))}
       <div className="mt-12 bg-gray-100 rounded-lg p-6">
-        <h2 className="text-2xl font-semibold mb-4 text-center">
+        <h2 className="text-2xl font-semibold mb-4 text-center text-black">
           Madaniy tadbirlar
         </h2>
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="list-disc list-inside space-y-2 text-black">
           <li>Sharq taronalari xalqaro musiqa festivali (Samarqand)</li>
           <li>Ipak va ziravorlar festivali (Buxoro)</li>
           <li>Baxshi san&apos;ati xalqaro festivali (Termiz)</li>

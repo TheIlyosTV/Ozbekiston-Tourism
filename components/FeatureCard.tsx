@@ -18,7 +18,7 @@ const FeatureCard = ({ imageSrc, title, description }: FeatureCardProps) => (
         className="rounded-full"
       />
     </div>
-    <h3 className="text-xl font-semibold mb-2">{title}</h3>
+    <h3 className="text-xl font-semibold mb-2 text-black">{title}</h3>
     <p className="text-gray-600">{description}</p>
   </div>
 );

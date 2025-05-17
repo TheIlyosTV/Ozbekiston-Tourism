@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import RegionCarousel from "../components/RegionCarousel";
@@ -40,18 +40,16 @@ const Home = () => {
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-12 text-black">
             O&apos;zbekiston viloyatlari
           </h2>
           <RegionCarousel />
         </div>
       </section>
 
-   
-
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-12 text-black">
             Virtual sayohat
           </h2>
           <VirtualTour />
@@ -60,10 +58,10 @@ const Home = () => {
 
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-12 text-black">
             Nima uchun O&apos;zbekiston?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-black">
             <FeatureCard
               imageSrc="/images/history.jpg"
               title="Boy tarix"
